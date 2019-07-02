@@ -32,18 +32,18 @@ public struct AKImageCropperCropViewConfiguration {
     
     /// Delay before the crop rectangle will scale to fit cropper view frame edges.
     public var zoomingToFitDelay: TimeInterval = 1.0
-
+    
     /**
      Animation options for layout transitions.
      
-     -  duration: The duration of the transition animation, measured in seconds.     
+     -  duration: The duration of the transition animation, measured in seconds.
      -  options: Specifies the supported animation curves.
      */
-    public var animation: (duration: TimeInterval, options: UIViewAnimationOptions) = (duration: 0.3, options: .curveEaseInOut)
-
+    public var animation: (duration: TimeInterval, options: UIView.AnimationOptions) = (duration: 0.3, options: .curveEaseInOut)
+    
     /// Edges insets for crop rectangle. Static values for programmatically rotation.
     
-    public var cropRectInsets = UIEdgeInsetsMake(20, 20, 20, 20)
+    public var cropRectInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
     /// The smallest value for the crop rectangle sizes. Initial value of this property is 60 pixels width and 60 pixels height.
     public var minCropRectSize: CGSize = CGSize(width: 60, height: 60)
@@ -58,7 +58,7 @@ public struct AKImageCropperCropViewConfiguration {
      -  horizontal: Thickness for horizontal edges: Top, Bottom.
      */
     public var edgeTouchThickness: (vertical: CGFloat, horizontal: CGFloat) = (vertical: 20.0, horizontal: 20.0)
-
+    
     //  MARK: Visual Appearance
     
     /// Overlay visual configuration.
@@ -70,6 +70,6 @@ public struct AKImageCropperCropViewConfiguration {
     /// Corners visual configuration.
     public var corner = AKImageCropperCropViewConfigurationCorner()
     
-    /// Grid visual configuration.    
+    /// Grid visual configuration.
     public var grid = AKImageCropperCropViewConfigurationGrid()
 }

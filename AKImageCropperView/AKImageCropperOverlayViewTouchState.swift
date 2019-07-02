@@ -23,10 +23,10 @@
 
 /// User interaction state for edge or corner.
 public enum AKImageCropperCropViewTouchState {
-
+    
     /// Default, relase
     case normal
-
-    /// Press, touch, etc.    
+    
+    /// Press, touch, etc.
     case highlighted
 }
